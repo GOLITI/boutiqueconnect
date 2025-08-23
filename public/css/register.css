@@ -1,0 +1,87 @@
+/* Styles de base pour un formulaire centré */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--grey); /* Ou votre couleur de fond par défaut */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .auth-container {
+            background-color: var(--light); /* Votre couleur de fond de carte */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .auth-container h2 {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        .auth-container form div {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .auth-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .auth-container input[type="text"],
+        .auth-container input[type="email"],
+        .auth-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--grey); /* Couleur de bordure */
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: var(--dark);
+            background-color: var(--grey); /* Couleur de fond des inputs */
+        }
+        .auth-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--blue); /* Votre couleur principale */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .auth-container input[type="submit"]:hover {
+            background-color: #307cd6; /* Une nuance plus foncée de votre couleur principale */
+        }
+        .auth-container .links {
+            margin-top: 20px;
+        }
+        .auth-container .links a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .auth-container .links a:hover {
+            text-decoration: underline;
+        }
+        .auth-container .error-message {
+            color: var(--red);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .auth-container ul.errors {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+            color: var(--red);
+            font-size: 14px;
+            text-align: left;
+        }
+        .auth-container ul.errors li {
+            margin-bottom: 5px;
+        }

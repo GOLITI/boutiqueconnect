@@ -1,0 +1,126 @@
+/* Réutiliser les styles de auth-container de login.blade.php / register.blade.php */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.auth-container {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+.auth-container form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.auth-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark);
+    font-weight: 500;
+}
+/* CORRECTION: Appliquer le style aux types email, password ET text */
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.auth-container input[type="text"] { /* Ajout de input[type="text"] */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--dark);
+    background-color: var(--grey);
+}
+.auth-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.auth-container input[type="submit"]:hover {
+    background-color: #307cd6;
+}
+.auth-container .links {
+    margin-top: 20px;
+}
+.auth-container .links a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+.auth-container .links a:hover {
+    text-decoration: underline;
+}
+.auth-container .error-message {
+    color: var(--red);
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+}
+.auth-container ul.errors {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    color: var(--red);
+    font-size: 14px;
+    text-align: left;
+}
+.auth-container ul.errors li {
+    margin-bottom: 5px;
+}
+.auth-container .remember-me {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+.auth-container .remember-me input[type="checkbox"] {
+    margin-right: 8px;
+}
+/* Nouveau style pour le lien "Mot de passe oublié ?" */
+.auth-container .forgot-password-link {
+    text-align: right; /* Aligne le lien à droite */
+    margin-top: -10px; /* Ajuste la marge pour être plus proche du champ de mot de passe */
+    margin-bottom: 15px; /* Marge avant le bouton de soumission */
+}
+
+/* Styles spécifiques pour l'icône "voir mot de passe" */
+.password-input-container {
+    position: relative;
+    margin-bottom: 15px; /* Ajustez si nécessaire */
+}
+/* CORRECTION: Assurer que le padding-right est suffisant pour les deux types */
+.password-input-container input[type="password"],
+.password-input-container input[type="text"] {
+    padding-right: 40px; /* Espace pour l'icône */
+}
+.password-input-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--dark-grey);
+    font-size: 1.2em;
+    /* Ajustement léger si nécessaire pour le centrage vertical parfait */
+    /* line-height: 1; pour s'assurer que la hauteur de l'icône est minimale */
+}
